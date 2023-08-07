@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="b1">클릭1</button>
+        <button id="b2">클릭2</button>
+        <button id="b3">클릭3</button>
+    </body>
+
+    <script>
+        // 버튼 3개에 대해서 변수에 저장
+        const [$b1, $b2, $b3] = document.querySelectorAll('button');
+
+        // b1에 연동할 함수 선언
+        const sayHello = () => {
+            alert('안녕하세요!!!!!!!!');
+        };
+
+        // b1에 onclick 이벤트로 sayHello 함수 연결
+        $b1.onclick = sayHello;
+
+        const $redBack = () =>{
+            const $click2 = document.querySelector('#b2');
+            $click2.style.background = 'red';
+        };
+
+        $b2.onclick = $redBack;
+
+
+        $b3.onmouseover = () =>{
+            const $click3 = document.querySelector('#b3');
+            $click3.style.background = 'blue';
+        };
+        $b3.onmouseout = () =>{
+            const $click3 = document.querySelector('#b3');
+            $click3.style.background = 'yellow';
+        };
+    </script>
+</html>

@@ -1,0 +1,24 @@
+<script>
+
+function CalcBMI(height, weight){
+    var height = parseFloat(prompt('키를 입력해주세요'));
+    var weight = parseFloat(prompt('몸무게를 입력해주세요.'));
+    var meterht = height/100; 
+    
+    var BMI = weight / (meterht * meterht);
+    if(BMI > 25){
+        console.log(`키 ->${meterht}m, 체중 ->${weight}kg의 체질량지수는: ${BMI}입니다.`)
+        console.log("당신은 과체중 입니다.")
+    }else if(BMI < 18.5){
+        console.log(`키 ->${meterht}m, 체중 ->${weight}kg의 체질량지수는: ${BMI}입니다.`)
+        console.log("당신은 저체중입니다.")
+    }else{
+        console.log(`키 ->${meterht}m, 체중 ->${weight}kg의 체질량지수는: ${BMI}입니다.`)
+        console.log("당신은 정상체중입니다.")
+    }
+    return BMI;
+    
+}
+
+CalcBMI();
+</script>

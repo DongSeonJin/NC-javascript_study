@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            .hide {
+                display : none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <button id="hideButton">텍스트를 숨기는 버튼!</button>
+
+        <div class="text">안녕하세요~~~</div>
+
+        <script>
+            const $hideBt = document.querySelector('#hideButton');
+
+            $hideBt.onclick = () =>{
+                const $hidebox = document.querySelector('.text');
+                $hidebox.classList.toggle('hide');
+            }
+
+            $btn.onclick = hideText;
+        </script>
+    </body>
+</html>

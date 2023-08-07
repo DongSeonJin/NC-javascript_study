@@ -1,0 +1,47 @@
+<script>
+    var userInfo = {
+    userList: [{
+            account: 'kim1234',
+            password: 'kkk1234',
+            username: '김두한'
+        },
+        {
+            account: 'park9876',
+            password: 'ppp9999',
+            username: '박찬호'
+        },
+        {
+            account: 'hong7766',
+            password: 'hhh1234',
+            username: '홍길동'
+        },
+    ]
+};
+var isExistUser = false; // 사용자 존재 여부 초기화
+
+// 사용자가 확인완료 될떄까지 반복
+while (!isExistUser) { 
+  var account = prompt("계정을 입력하세요."); // 계정 입력 받기
+  var password = prompt("비밀번호를 입력하세요."); // 비밀번호 입력 받기
+
+  for (var i = 0; i < userInfo.userList.length; i++) {
+    if (userInfo.userList[i].account === account) { // 계정이 존재하는 경우
+      if (userInfo.userList[i].password === password) { // 비밀번호가 일치하는 경우
+        console.log(userInfo.userList[i].username + "님 환영합니다!"); // 로그인 성공 메시지 출력
+        
+        // while문 탈출
+        isExistUser = true; 
+        break; 
+
+      } else { // 비밀번호가 일치하지 않는 경우
+        console.log("비밀번호가 틀렸습니다.");
+        break; 
+      }
+    }
+  }
+
+  if (!isExistUser) { // 사용자가 존재하지 않는 경우
+    console.log("존재하지 않는 회원입니다.");
+  }
+}
+</script>

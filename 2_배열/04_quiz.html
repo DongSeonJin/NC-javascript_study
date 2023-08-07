@@ -1,0 +1,11 @@
+<script>
+var member = ['사쿠라', '김채원', '카즈하', '허윤진', '홍은채'];
+var memberName = prompt(`삭제할 멤버 이름을 적어주세요.`);
+
+
+if(member.includes(memberName)){
+    member.splice(member.indexOf(memberName), 0);
+}else{
+    alert(`${memberName} 은 잘못된 이름입니다.`);
+}
+</script>

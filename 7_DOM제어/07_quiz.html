@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 class="theTitle">html 조작</h1>
+        <ul class="list">
+            <li class="obj1">list_2</li>
+            <li>list_3</li>
+            <li>list_4</li>
+            <li>list_5</li>
+        </ul>
+
+        <script>
+            $h1 = document.querySelector(".theTitle");
+
+            $h1.innerHTML = '<a href="#">요소 객체 조작</a>';
+
+            $ul = document.querySelector(".obj1");
+
+            $ul.innerHTML = "리스트_2";
+
+            $list = document.querySelector('#list');// 부모요소, 여기 내부에 li를 추가함
+            $newLi = document.createElement("li");// 자식요소, 새로 생성됨(내용물 없음)
+            $newLi.textContent = "list_6";
+            $list.appendChild($newLi);
+
+            $newLi2 = document.createElement("li");
+            $newLi2.textContent = "list_1";
+            $list.insertBefore($newLi2, $list.firstElementChild);
+
+            $list.removeChild($list.firstElementChild);
+
+
+        </script>
+    
+    </body>
+</html>

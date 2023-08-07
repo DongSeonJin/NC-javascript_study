@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul id="list1">
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+                <li>리스트4</li>
+                <li>리스트5</li>
+                <li>리스트6</li>
+                <li>리스트7</li>
+            </ul>
+        </div>
+        <script>
+            let elements = document.querySelectorAll("li:nth-child(odd)");
+            for(const $li of elements){
+                $li.style.background = "yellow";
+            }
+            
+
+            elements = document.querySelectorAll("li:nth-child(even)")
+            for(const $li of elements){
+                $li.style.background = "gray";
+            }
+
+            elements = document.querySelectorAll("li");
+            elements[0].style.background = "red";
+
+            elements = document.querySelectorAll("li");
+            const $lastLi = elements[elements.length - 1];
+            $lastLi.style.color = 'green';
+
+            elements = document.querySelectorAll("li");
+            const [$fir, $sec, $thi, ...others] = elements;
+            for($li of others){
+                $li.style.border = '2px dashed violet';
+            }
+            
+        </script>
+    </body>
+</html>
